@@ -60,3 +60,12 @@ Conclusion
 
 > In this paper, we propose a new bias field correction method by altering the Gaussian noise to Hampel noise, a mixture of Gaussian distribution and Cauchy-Lorentz distribution. Our proposed method is more robust with automatic parameter settings on correcting the bias field than N4. Such automation can give less complexity to the user. We also point out that such deep learning approach is faster in time while still maintaining the accuracy.
 
+
+
+Hampel Mixture Distribution
+============
+
+
+
+
+
