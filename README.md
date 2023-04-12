@@ -25,10 +25,10 @@ Method and Experiments
 
 > Method :  We modeled the Hampel Mixture distribution \cite{https://doi.org/10.2307/3315772} to represent the image intensity disrupted by the inhomogeneities. Denote $\mathbb{H}(\alpha, x_{0}, \gamma$) as the Hampel mixture distribution, where $\alpha,x_{0},\gamma$ are weight, location, scale parameter, respectively; We use the term $F_h(x,\alpha), F_n(x;0,1), F_c(x; x_{0}, \gamma)$ as probability distribution function of Hampel, Gaussian, and Cauchy-Lorentz, respectively. Hampel function\footnote{Hampel mixture probability distribution function} could be written as
 
-> $\[F_h(x,\alpha)=(1-\alpha)F_n(x;0,1)+\alpha F_c(x;x_{0},\gamma)\ \ with\ \ 0\leq\alpha\leq1\]$
-> $\[F_n(x;0,1) = {1\over\sqrt{2\pi}}exp({-x^2\over2}),\ F_c(x;x_{0},\gamma)={1\over\pi}\left({\gamma^2\over(x-x_0)^2+\gamma^2}\right)\]$
+> $F_h(x,\alpha)=(1-\alpha)F_n(x;0,1)+\alpha F_c(x;x_{0},\gamma)\ \ with\ \ 0\leq\alpha\leq1$
+> $F_n(x;0,1) = {1\over\sqrt{2\pi}}exp({-x^2\over2}),\ F_c(x;x_{0},\gamma)={1\over\pi}\left({\gamma^2\over(x-x_0)^2+\gamma^2}\right)$
 
-Hampel function was optimized with Maximum Likelihood Estimation. Through maximizing the Hampel function, we were able to allocate $(\alpha,x_0,\gamma)$ as $(1e-05,0.6332,0.0274)$. Detail explanation and the source code can be found in our Github repository. $\[\mathbb{H}(\alpha,x_0,\gamma)=\mathbb{H}(1e-05,0.6332,0.0274)\]$
+> Hampel function was optimized with Maximum Likelihood Estimation. Through maximizing the Hampel function, we were able to allocate $(\alpha,x_0,\gamma)$ as $(1e-05,0.6332,0.0274)$. Detail explanation and the source code can be found in our Github repository. $\[\mathbb{H}(\alpha,x_0,\gamma)=\mathbb{H}(1e-05,0.6332,0.0274)\]$
 
 > Dataset : This study was approved by the Institutional Review Board. We used $202$ subjects ($126$ male, $76$ female, age $26.27\pm7.84$ years) scanned on a 3T MRI following 3D gradient echo protocol with MT pulse \cite{nam2017imaging,namsimultaneous}. Each of the brain slices is resized to a size of $512\times512$ and normalized the values to range between $[0,1]$. Our dataset is composed of $6,000$ images ($n = 176$) to train and $780$ images ($n= 26$) to test.
 
