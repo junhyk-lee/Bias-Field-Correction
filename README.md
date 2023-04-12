@@ -41,6 +41,18 @@ Method and Experiments
 
 Results
 ============
+> As shown in Table Table1(A), Hampel random noise outperformed Gaussian random noise in MSE, PSNR, SSIM. Quantitatively, Hampel mixture distribution can provide clear evidence of convergence. Figure 2 shows N4 and HDDnet follow similar pattern of the bias field in synthetic image. But as in Table1(B), our model outperformed on its MSE and PSNR, while SSIM is small in difference. While N4 takes average of 39.6014 secs to correct the bias field of from its corrupted MRI, HDDnet takes about average of 4 secs, which is 9.75 times faster. While maintaining or improving the bias field correction our model shows high efficiency in time.
+
+|   | Model    | MSE                 | PSNR              | SSIM             | Inference Time    |
+|---|----------|---------------------|-------------------|------------------|-------------------|
+| A | Gaussian | 0.0004 &pm; 0.0003  | 32.486 &pm; 2.649 | 0.950 &pm; 0.002 | 4.471 &pm; 0.030  |
+|   | Hampel   | 0.0003 &pm; 0.0002  | 35.945 &pm; 1.050 | 0.983 &pm; 0.004 | 4.473 &pm; 0.012  |
+| B | N4       | 0.0003 &pm; 0.0003  | 34.766 &pm; 1.815 | 0.979 &pm; 0.003 | 39.601 &pm; 0.128 |
+|   | HDDnet   | 0.0001 &pm; 0.0002  | 36.865 &pm; 2.614 | 0.978 &pm; 0.003 | 4.478 &pm; 0.029  |
+
+<p align="center">
+  <img src = "https://github.com/junhyk-lee/Bias-Field-Correction/blob/main/HDD/fig_2.png" />
+</p>
 
 
 Conclusion
