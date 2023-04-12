@@ -1,8 +1,6 @@
 Bias Field Correction with Hampel random noise
 ============
-by
-Lee,Junhyeok
-Kang,Junghwa
+by Lee,Junhyeok   Kang,Junghwa    Nam,Yoonho    Lee,TaeYoung
 
 
 
@@ -31,9 +29,6 @@ Method and Experiments
 
 Results
 ============
-
-
-
 
 
 Conclusion
