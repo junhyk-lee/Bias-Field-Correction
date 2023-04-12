@@ -14,7 +14,10 @@ Introduction
 ============
 
 > Magnetic Resonance Imaging (MRI) is a widely used medical imaging modality. But bias field obscure subtle details and impede accurate identification. N4 has been a commonly used method for correcting the inhomogeneities, however, this method has limitations in terms of its accuracy, technical factor, and efficiency. We propose Hampel Denoising Diffusion Model (HDDnet) conceived to model inhomogeneities by Cauchy-Lorentz distribution. We modeled the Hampel mixture distribution to represent the image intensity disrupted by the inhomo- geneities. To assess the fitness of Hampel function to the image intensity, the mean fitting error between the histogram and the probability function was calcuated, shown in Figure 1. The intensity difference between the input image and t-step image of diffusion process was used in both histogram and the probability function. The mean fitting error is 0.012 less in Hampel function showing that it is a much better fit to MRI with the bias field, Figure 1A-D. Proposed method effectively corrects the bias field and gener- ates reduced inhomogeneities MRI with higher accuracy and faster inference time than N4.
-![alt text](https://github.com/junhyk-lee/Bias-Field-Correction/blob/main/HDD/Picture1.jpg?raw=true)
+<p align="center">
+  <img src = "https://github.com/junhyk-lee/Bias-Field-Correction/blob/main/HDD/Picture1.jpg" />
+</p>
+> Figure 1 : (A) Hampel distribution (B) Gaussian distribution (C) Comparing the fit (D) The mean fitting MSE between the histogram and the density function
 
 
 Method and Experiments
