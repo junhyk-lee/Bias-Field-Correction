@@ -17,13 +17,13 @@ Introduction
 <p align="center">
   <img src = "https://github.com/junhyk-lee/Bias-Field-Correction/blob/main/HDD/Picture1.jpg" />
 </p>
-> Figure 1 : (A) Hampel distribution (B) Gaussian distribution (C) Comparing the fit (D) The mean fitting MSE between the histogram and the density function
+Figure 1 : (A) Hampel distribution (B) Gaussian distribution (C) Comparing the fit (D) The mean fitting MSE between the histogram and the density function
 
 
 Method and Experiments
 ============
 
-> Method : We modeled the Hampel Mixture Distribution to represent the image intensity disrupted by the inhomogeneities. Denote H(\alpha)
+> Method : We modeled the Hampel Mixture Distribution to represent the image intensity disrupted by the inhomogeneities. Denote $\mathbb{H}(\alpha, x_{0}, \gamma$) as the Hampel mixture distribution,
 > Dataset
 > Model and Training
 > Evaluation
