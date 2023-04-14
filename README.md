@@ -1,6 +1,6 @@
 Bias Field Correction with Hampel random noise
 ============
-by \t Lee,Junhyeok   Kang,Junghwa    Nam,Yoonho    Lee,TaeYoung
+Authors: Lee Junhyeok, Kang Junghwa, Nam Yoonho, Lee TaeYoung
 
 
 
