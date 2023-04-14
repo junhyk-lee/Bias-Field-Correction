@@ -65,11 +65,13 @@ Conclusion
 Hampel Mixture Distribution
 ============
 
-> Signal can be divide into two sub-signals, $S_{m}, S_{b}$.  $S_{m}$ represents the signal that encodes the patients information. But $S_{b}$ is the unwanted bias field that corrupts the wanted signal and blurrs the quantitative analysis. We investigated with the prior knowledge that $S_{b}$ can be described with Cauchy-Lorentz distribution. We took the bias field apart from the MRI with using N4 and with R package "fitdistr" package to analyze whether it does fit into the Cauchy-Lorentz distribution. Figure 3 describes that the Cauchy-Lorentz distribution possibly describes the bias field with location and scale parameter $x_{0}, \gamma = (0.6332, 0.0274)$. We then established Hampel mixture distribution that collaborates the Gaussian distribution and the Cauchy-Lorentz distribution, each representing $S_{m}, S_{b}$ respectively.
+> Signal can be divide into two sub-signals, $S_{m}, S_{b}$.  $S_{m}$ represents the signal that encodes the patients information. But $S_{b}$ is the unwanted bias field that corrupts the wanted signal and blurrs the quantitative analysis. We investigated with the prior knowledge that $S_{b}$ can be described with Cauchy-Lorentz distribution. We took the bias field apart from the MRI with using N4 and with R package **"fitdistr"** package to analyze whether it does fit into the Cauchy-Lorentz distribution. Figure 3 describes that the Cauchy-Lorentz distribution possibly describes the bias field with location and scale parameter $x_{0}, \gamma = (0.6332, 0.0274)$. We then established Hampel mixture distribution that collaborates the Gaussian distribution and the Cauchy-Lorentz distribution, each representing $S_{m}, S_{b}$ respectively.
 <p align="center">
   <img src = "https://github.com/junhyk-lee/Bias-Field-Correction/blob/main/HDD/hdd_cdf.png" />
   <img src = "https://github.com/junhyk-lee/Bias-Field-Correction/blob/main/HDD/hdd_cdf2.png" />
 </p>
+
+> 
 
 
 
