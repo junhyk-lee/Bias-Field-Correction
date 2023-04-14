@@ -25,9 +25,9 @@ Method and Experiments
 
 > Method :  We modeled the Hampel Mixture distribution \cite{https://doi.org/10.2307/3315772} to represent the image intensity disrupted by the inhomogeneities. Denote $\mathbb{H}(\alpha, x_{0}, \gamma$) as the Hampel mixture distribution, where $\alpha,x_{0},\gamma$ are weight, location, scale parameter, respectively; We use the term $F_h(x,\alpha), F_n(x;0,1), F_c(x; x_{0}, \gamma)$ as probability distribution function of Hampel, Gaussian, and Cauchy-Lorentz, respectively. Hampel function\footnote{Hampel mixture probability distribution function} could be written as
 >
-> $F_h(x,\alpha)=(1-\alpha)F_n(x;0,1)+\alpha F_c(x;x_{0},\gamma)\ \ with\ \ 0\leq\alpha\leq1$
+>> $F_h(x,\alpha)=(1-\alpha)F_n(x;0,1)+\alpha F_c(x;x_{0},\gamma)\ \ with\ \ 0\leq\alpha\leq1$
 > 
-> $F_n(x;0,1) = {1\over\sqrt{2\pi}}exp({-x^2\over2}),\ F_c(x;x_{0},\gamma)={1\over\pi}\left({\gamma^2\over(x-x_0)^2+\gamma^2}\right)$
+>> $F_n(x;0,1) = {1\over\sqrt{2\pi}}exp({-x^2\over2}),\ F_c(x;x_{0},\gamma)={1\over\pi}\left({\gamma^2\over(x-x_0)^2+\gamma^2}\right)$
 >
 > Hampel function was optimized with Maximum Likelihood Estimation. Through maximizing the Hampel function, we were able to allocate $(\alpha,x_0,\gamma)$ as $(1e-05,0.6332,0.0274)$. Detail explanation will be described below. $\[\mathbb{H}(\alpha,x_0,\gamma)=\mathbb{H}(1e-05,0.6332,0.0274)\]$
 >
@@ -65,7 +65,7 @@ Conclusion
 Hampel Mixture Distribution
 ============
 
-> Signal can be divide into two sub-signals, $S_{m}, S_{b}$.  $S_{m}$ represents the signal that encodes the patients information. But $s_{b}$ is the unwanted bias field that corrupts the wanted signal and blurrs the quantitative analysis. We investigated with the prior knowledge that $s_{b}$ can be described with Cauchy-Lorentz distribution. We took the bias field apart from the MRI with using N4 and with R package "fitdistr" package to analyze whether it does fit into the Cauchy-Lorentz distribution. Figure 3 describes that the Cauchy-Lorentz distribution possibly describes the bias field with location and scale parameter $x_{0}, \gamma = (0.6332, 0.0274)$. We then established Hampel mixture distribution that collaborates the Gaussian distribution and the Cauchy-Lorentz distribution, each representing $S_{m}, S_{b}$ respectively. 
+> Signal can be divide into two sub-signals, $S_{m}, S_{b}$.  $S_{m}$ represents the signal that encodes the patients information. But $S_{b}$ is the unwanted bias field that corrupts the wanted signal and blurrs the quantitative analysis. We investigated with the prior knowledge that $S_{b}$ can be described with Cauchy-Lorentz distribution. We took the bias field apart from the MRI with using N4 and with R package "fitdistr" package to analyze whether it does fit into the Cauchy-Lorentz distribution. Figure 3 describes that the Cauchy-Lorentz distribution possibly describes the bias field with location and scale parameter $x_{0}, \gamma = (0.6332, 0.0274)$. We then established Hampel mixture distribution that collaborates the Gaussian distribution and the Cauchy-Lorentz distribution, each representing $S_{m}, S_{b}$ respectively. 
 
 
 
