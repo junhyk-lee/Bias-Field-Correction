@@ -1,6 +1,6 @@
 Bias Field Correction with Hampel random noise
 ============
-Authors: Lee Junhyeok, Kang Junghwa, Nam Yoonho, Lee TaeYoung
+> Authors: Lee Junhyeok, Kang Junghwa, Nam Yoonho, Lee TaeYoung
 
 
 
@@ -23,11 +23,11 @@ Figure 1 : (A) Hampel distribution (B) Gaussian distribution (C) Comparing the f
 Method and Experiments
 ============
 
-> Method :  We modeled the Hampel Mixture distribution \cite{https://doi.org/10.2307/3315772} to represent the image intensity disrupted by the inhomogeneities. Denote $\mathbb{H}(\alpha, x_{0}, \gamma$) as the Hampel mixture distribution, where $\alpha,x_{0},\gamma$ are weight, location, scale parameter, respectively; We use the term $F_h(x,\alpha), F_n(x;0,1), F_c(x; x_{0}, \gamma)$ as probability distribution function of Hampel, Gaussian, and Cauchy-Lorentz, respectively. Hampel function\footnote{Hampel mixture probability distribution function} could be written as
+> Method :  We modeled the Hampel Mixture distribution to represent the image intensity disrupted by the inhomogeneities. Denote $\mathbb{H}(\alpha, x_{0}, \gamma$) as the Hampel mixture distribution, where $\alpha,x_{0},\gamma$ are weight, location, scale parameter, respectively; We use the term $F_h(x,\alpha), F_n(x;0,1), F_c(x; x_{0}, \gamma)$ as probability distribution function of Hampel, Gaussian, and Cauchy-Lorentz, respectively. Hampel function\footnote{Hampel mixture probability distribution function} could be written as
 >
->> $F_h(x,\alpha)=(1-\alpha)F_n(x;0,1)+\alpha F_c(x;x_{0},\gamma)\ \ with\ \ 0\leq\alpha\leq1$
+>> **$F_h(x,\alpha)=(1-\alpha)F_n(x;0,1)+\alpha F_c(x;x_{0},\gamma)\ \ with\ \ 0\leq\alpha\leq1$**
 > 
->> $F_n(x;0,1) = {1\over\sqrt{2\pi}}exp({-x^2\over2}),\ F_c(x;x_{0},\gamma)={1\over\pi}\left({\gamma^2\over(x-x_0)^2+\gamma^2}\right)$
+>> **$F_n(x;0,1) = {1\over\sqrt{2\pi}}exp({-x^2\over2}),\ F_c(x;x_{0},\gamma)={1\over\pi}\left({\gamma^2\over(x-x_0)^2+\gamma^2}\right)$**
 >
 > Hampel function was optimized with Maximum Likelihood Estimation. Through maximizing the Hampel function, we were able to allocate $(\alpha,x_0,\gamma)$ as $(1e-05,0.6332,0.0274)$. Detail explanation will be described below. $\[\mathbb{H}(\alpha,x_0,\gamma)=\mathbb{H}(1e-05,0.6332,0.0274)\]$
 >
@@ -35,13 +35,13 @@ Method and Experiments
 >
 > Model and Training : HDDnet is trained on Nvidia RTX 3090 GPU 24GB with the batch size of 8 for 512 iterations. HDDnet is trained with $L2$ loss, the sigmoid noise schedule for 1,000 steps, a learning rate of $10^{-6}$ for the Adam optimizer, the first layer is chosen as 64.
 >
-> Evaluation : Evaluation was took in both quantitative and qualitative. For the quantitative evaluation, MSE, PSNR, and SSIM\footnote{Mean Squared Error, Peak Signal-to-Noise Ratio, Structural Similarity Index Map, respectively}\cite{1284395} were used. Each was calculated between model output and the N4 label image. Inference time was measured in same environment with training setup, with 26 patients. The qualitative assessment was done by comparing N4 and HDDnet prediction of synthetic bias field. The synthetic bias field was generated from train image bias field merged to test set, shown in Figure 2.
+> Evaluation : Evaluation was took in both quantitative and qualitative. For the quantitative evaluation, **Mean Squared Error, Peak Signal-to-Noise Ratio, Structural Similarity Index Map**, respectively were used. Each was calculated between model output and the N4 label image. **Inference time** was measured in same environment with training setup, with 26 patients. The qualitative assessment was done by comparing N4 and HDDnet **prediction of synthetic bias field**. The synthetic bias field was generated from train image bias field merged to test set, shown in Figure 2.
 
 
 
 Results
 ============
-> As shown in Table Table1(A), Hampel random noise outperformed Gaussian random noise in MSE, PSNR, SSIM. Quantitatively, Hampel mixture distribution can provide clear evidence of convergence. Figure 2 shows N4 and HDDnet follow similar pattern of the bias field in synthetic image. But as in Table1(B), our model outperformed on its MSE and PSNR, while SSIM is small in difference. While N4 takes average of 39.6014 secs to correct the bias field of from its corrupted MRI, HDDnet takes about average of 4 secs, which is 9.75 times faster. While maintaining or improving the bias field correction our model shows high efficiency in time.
+> **As shown in Table Table1(A), Hampel random noise outperformed Gaussian random noise in MSE, PSNR, SSIM. Quantitatively, Hampel mixture distribution can provide clear evidence of convergence. Figure 2 shows N4 and HDDnet follow similar pattern of the bias field in synthetic image. But as in Table1(B), our model outperformed on its MSE and PSNR, while SSIM is small in difference. While N4 takes average of 39.6014 secs to correct the bias field of from its corrupted MRI, HDDnet takes about average of 4 secs, which is 9.75 times faster. While maintaining or improving the bias field correction our model shows high efficiency in time.**
 
 |   | Model    | MSE                 | PSNR              | SSIM             | Inference Time    |
 |---|----------|---------------------|-------------------|------------------|-------------------|
